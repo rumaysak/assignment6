@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-23 02:23:59 PM"/>
+        <attribute name="created" value="TU87REVTS1RPUC1GVFZQUlJROzIwMjMtMDMtMjM7MDI6MTg6NDAgUE07MjU3OA=="/>
+        <attribute name="edited" value="TU87REVTS1RPUC1GVFZQUlJROzIwMjMtMDMtMjM7MDI6MjM6NTkgUE07MjsyNjkz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qty" type="Real" array="False" size=""/>
+            <declare name="maturity" type="Real" array="False" size=""/>
+            <declare name="rate" type="Real" array="False" size=""/>
+            <input variable="qty"/>
+            <input variable="maturity"/>
+            <input variable="rate"/>
+            <if expression="qty = &quot;A&quot; AND qty &gt; 100000">
+                <then>
+                    <assign variable="qty" expression="100000"/>
+                </then>
+                <else>
+                    <assign variable="qty" expression="0.00"/>
+                </else>
+            </if>
+            <assign variable="total" expression="qty*rate"/>
+            <output expression="&quot;The total is $&quot;&amp;total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

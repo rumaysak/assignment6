@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-23 02:46:13 PM"/>
+        <attribute name="created" value="TU87REVTS1RPUC1GVFZQUlJROzIwMjMtMDMtMjM7MDE6MjQ6MTggUE07MjU3OQ=="/>
+        <attribute name="edited" value="TU87REVTS1RPUC1GVFZQUlJROzIwMjMtMDMtMjM7MDI6NDY6MTMgUE07MjsyNjg4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="item" type="String" array="False" size=""/>
+            <declare name="extp" type="Real" array="False" size=""/>
+            <declare name="disc" type="Real" array="False" size=""/>
+            <declare name="qty" type="Real" array="False" size=""/>
+            <input variable="item"/>
+            <input variable="qty"/>
+            <if expression="qty = &quot;A&quot; AND qty &gt; 1000">
+                <then>
+                    <assign variable="disc" expression="0.10"/>
+                </then>
+                <else>
+                    <assign variable="disc" expression="0.00"/>
+                </else>
+            </if>
+            <assign variable="extp" expression="qty*10.00"/>
+            <assign variable="disc" expression="disc*extp"/>
+            <output expression="&quot;Extended price is $&quot;&amp; extp" newline="True"/>
+            <output expression="&quot;disc is $&quot;&amp;disc" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

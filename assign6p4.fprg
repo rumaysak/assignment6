@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-23 02:27:04 PM"/>
+        <attribute name="created" value="TU87REVTS1RPUC1GVFZQUlJROzIwMjMtMDMtMjM7MDI6MjQ6MDggUE07MjU3OQ=="/>
+        <attribute name="edited" value="TU87REVTS1RPUC1GVFZQUlJROzIwMjMtMDMtMjM7MDI6Mjc6MDQgUE07MTsyNjg2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qty" type="Real" array="False" size=""/>
+            <declare name="ppt" type="Integer" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <input variable="qty"/>
+            <input variable="ppt"/>
+            <input variable="total"/>
+            <if expression="qty = &quot;Q&quot; AND qty &gt; 25">
+                <then>
+                    <assign variable="qty" expression="50.00"/>
+                </then>
+                <else>
+                    <assign variable="qty" expression="0.00"/>
+                </else>
+            </if>
+            <assign variable="qty" expression="qty*ppt"/>
+            <output expression="&quot;The total is $&quot;&amp;total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
